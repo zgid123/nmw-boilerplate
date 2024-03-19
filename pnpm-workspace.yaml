@@ -1,0 +1,8 @@
+packages:
+  - "@types/**"
+  - "app/**"
+  - "packages/**"
+  - "services/**"
+  - "workspaces/**"
+  - "!**/.next/**"
+  - "!**/dist/**"

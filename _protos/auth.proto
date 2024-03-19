@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+package auth;
+
+enum RoleEnum {
+  admin = 0;
+  user  = 1;
+}
+
+message Profile {
+  optional string first_name = 1;
+  optional string last_name  = 2;
+  string email               = 3;
+  string uid                 = 4;
+  RoleEnum role              = 5;
+}
+
+message SignInResponse {
+  string auth_token    = 1;
+  string refresh_token = 2;
+  Profile profile      = 3;
+}
+
+message SignInRequest {
+  string email    = 1;
+  string password = 2;
+}
+
+message GetProfileResponse {
+  Profile profile = 1;
+}
+
+service AuthService {
+  rpc SignIn(SignInRequest) returns (SignInResponse);
+  rpc GetProfile(google.protobuf.Empty) returns (GetProfileResponse);
+}

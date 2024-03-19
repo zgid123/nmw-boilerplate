@@ -1,0 +1,25 @@
+{
+  "name": "@data/grpc",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup --config rollup.config.ts --configPlugin typescript"
+  },
+  "exports": {
+    "./auth": {
+      "import": "./lib/auth.interface.mjs",
+      "require": "./lib/auth.interface.cjs"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "auth": [
+        "./lib/auth.interface.d.ts"
+      ]
+    }
+  },
+  "devDependencies": {
+    "@config/rollup": "workspace:^",
+    "rollup": "^4.13.0"
+  }
+}

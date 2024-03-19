@@ -1,0 +1,74 @@
+name: NestJS Service - Auth Service
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - _protos/auth.proto
+      - services/nestjs/auth-service/**
+      - packages/@cjs/**
+      - packages/@config/**
+      - packages/@core/utils/**
+      - packages/@nest/**
+      - packages/@data/**
+
+jobs:
+  test:
+    name: Run unit test
+
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:latest
+        env:
+          POSTGRES_DB: nestjs_auth_service_test
+          POSTGRES_PASSWORD: nestjs_auth_service_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            _protos/auth.proto
+            .github
+            @types
+            packages/@cjs
+            packages/@config
+            packages/@core/utils
+            packages/@nest
+            packages/@data
+            services/nestjs/auth-service
+            .eslintignore
+            .eslintrc.json
+            package.json
+            pnpm-lock.yaml
+            pnpm-workspace.yaml
+            tsconfig.json
+            turbo.json
+
+      - name: Prepare Node.JS and pnpm
+        uses: ./.github/actions/prepare-nodejs-pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build NestJS packages
+        run: |
+          pnpm -w build
+
+      - name: Run unit test
+        run: |
+          pnpm --filter=@services/auth test
+        env:
+          NODE_ENV: test
+          DB_HOST: localhost
+          DB_NAME: nestjs_auth_service_test
+          DB_PASSWORD: nestjs_auth_service_test

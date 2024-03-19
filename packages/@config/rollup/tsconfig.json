@@ -1,0 +1,14 @@
+{
+  "extends": "@config/tsconfig/tsconfig.es.json",
+  "compilerOptions": {
+    "declaration": true,
+    "outDir": "lib"
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "lib",
+    "node_modules"
+  ]
+}

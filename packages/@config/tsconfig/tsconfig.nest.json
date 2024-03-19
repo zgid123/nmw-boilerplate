@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.cmj.json",
+  "compilerOptions": {
+    "paths": {
+      "~/*": [
+        "./*"
+      ]
+    }
+  }
+}

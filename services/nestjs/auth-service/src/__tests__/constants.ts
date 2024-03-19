@@ -1,0 +1,5 @@
+export const jwtToken =
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSJ9.f_dU3ko8mHHOHVaAK_t4hX9H-Rs6JBjT1IsADfhVWCc';
+
+export const nonSubJwtToken =
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0XzJAZ21haWwuY29tIn0.o4f3GO-cNkJXzkd55ZjeZepFDHRji7q3hb4xPPN4B9M';

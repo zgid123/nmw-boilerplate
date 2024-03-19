@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "incremental": false,
+    "noFallthroughCasesInSwitch": false,
+    "noImplicitAny": false,
+    "sourceMap": false,
+    "strictBindCallApply": false,
+    "strictNullChecks": false
+  }
+}

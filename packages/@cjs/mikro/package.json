@@ -1,0 +1,36 @@
+{
+  "name": "@cjs/mikro",
+  "version": "0.0.1",
+  "exports": {
+    "./core": "./lib/core.cjs",
+    "./config": "./lib/config/index.cjs"
+  },
+  "typesVersions": {
+    "*": {
+      "core": [
+        "./lib/core.d.ts"
+      ],
+      "config": [
+        "./lib/config/index.d.ts"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "rollup --config rollup.config.ts --configPlugin typescript"
+  },
+  "dependencies": {
+    "@mikro-orm/core": "^6.1.11",
+    "@mikro-orm/entity-generator": "^6.1.11",
+    "@mikro-orm/migrations": "^6.1.11",
+    "@mikro-orm/postgresql": "^6.1.11",
+    "@mikro-orm/seeder": "^6.1.11",
+    "pluralize": "^8.0.0",
+    "uniqid": "^5.4.0"
+  },
+  "devDependencies": {
+    "@config/rollup": "workspace:^",
+    "@types/pluralize": "^0.0.33",
+    "@types/uniqid": "^5.3.4",
+    "rollup": "^4.13.0"
+  }
+}

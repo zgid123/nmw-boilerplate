@@ -1,0 +1,21 @@
+[req]
+distinguished_name = req_distinguished_name
+req_extensions = v3_req
+
+[req_distinguished_name]
+countryName = Country Name (2 letter code)
+countryName_default = VN
+stateOrProvinceName = State or Province Name (full name)
+stateOrProvinceName_default = Ho Chi Minh City
+localityName = Locality Name (eg, city)
+localityName_default = 7 District
+organizationalUnitName = Organizational Unit Name (eg, section)
+organizationalUnitName_default = Alpha de Lucifer
+commonName = Common Name
+commonName_default = 192.168.0.1
+commonName_max = 64
+
+[ v3_req ]
+# Extensions to add to a certificate request
+basicConstraints = CA:FALSE
+keyUsage = nonRepudiation, digitalSignature, keyEncipherment

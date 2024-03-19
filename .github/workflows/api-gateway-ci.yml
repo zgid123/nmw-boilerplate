@@ -1,0 +1,55 @@
+name: API Gateway CI
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - _protos/auth.proto
+      - workspaces/backend/api-gateway/**
+      - packages/@cjs/**
+      - packages/@config/**
+      - packages/@core/utils/**
+      - packages/@nest/**
+      - packages/@data/**
+
+jobs:
+  test:
+    name: Run unit test
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            _protos/auth.proto
+            .github
+            @types
+            packages/@cjs
+            packages/@config
+            packages/@core/utils
+            packages/@nest
+            packages/@data
+            workspaces/backend/api-gateway
+            .eslintignore
+            .eslintrc.json
+            package.json
+            pnpm-lock.yaml
+            pnpm-workspace.yaml
+            tsconfig.json
+            turbo.json
+
+      - name: Prepare Node.JS and pnpm
+        uses: ./.github/actions/prepare-nodejs-pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build NestJS packages
+        run: |
+          pnpm -w build
+
+      - name: Run unit test
+        run: |
+          pnpm --filter=api-gateway test

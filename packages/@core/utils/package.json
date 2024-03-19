@@ -1,0 +1,34 @@
+{
+  "name": "@core/utils",
+  "version": "0.0.1",
+  "exports": {
+    "./dateUtils": {
+      "import": "./lib/dateUtils.mjs",
+      "require": "./lib/dateUtils.cjs"
+    },
+    "./stringUtils": {
+      "import": "./lib/stringUtils.mjs",
+      "require": "./lib/stringUtils.cjs"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "dateUtils": [
+        "./lib/dateUtils.d.ts"
+      ],
+      "stringUtils": [
+        "./lib/stringUtils.d.ts"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "rollup --config rollup.config.ts --configPlugin typescript"
+  },
+  "dependencies": {
+    "date-fns": "^3.6.0"
+  },
+  "devDependencies": {
+    "@config/rollup": "workspace:^",
+    "rollup": "^4.13.0"
+  }
+}

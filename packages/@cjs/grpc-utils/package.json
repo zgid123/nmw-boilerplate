@@ -1,0 +1,13 @@
+{
+  "name": "@cjs/grpc-utils",
+  "version": "0.0.1",
+  "main": "lib/index.cjs",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "rollup --config rollup.config.ts --configPlugin typescript"
+  },
+  "devDependencies": {
+    "@config/rollup": "workspace:^",
+    "rollup": "^4.13.0"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "extends": "@config/tsconfig/tsconfig.cmj.json",
+  "compilerOptions": {
+    "outDir": "lib"
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "lib",
+    "node_modules"
+  ]
+}

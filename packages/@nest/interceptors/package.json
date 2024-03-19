@@ -1,0 +1,39 @@
+{
+  "name": "@nest/interceptors",
+  "version": "0.0.1",
+  "exports": {
+    "./core": "./lib/interceptors/index.js",
+    "./vm": "./lib/vm.js",
+    "./automapper": "./lib/automapper.js"
+  },
+  "typesVersions": {
+    "*": {
+      "core": [
+        "./lib/interceptors/index.d.ts"
+      ],
+      "vm": [
+        "./lib/vm.d.ts"
+      ],
+      "automapper": [
+        "./lib/automapper.d.ts"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@automapper-add-on/classes": "^1.0.1",
+    "@automapper-add-on/interceptor": "^1.0.1",
+    "@automapper-add-on/mikro-premap": "^1.0.2",
+    "@automapper/core": "^8.8.1",
+    "@automapper/nestjs": "^8.8.1",
+    "@grpc.ts/core": "^1.1.5",
+    "@nestjs/common": "^10.3.4",
+    "reflect-metadata": "^0.2.1",
+    "rxjs": "^7.8.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21"
+  }
+}

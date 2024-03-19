@@ -1,0 +1,42 @@
+{
+  "name": "@data/dtos",
+  "version": "0.0.1",
+  "exports": {
+    "schema": {
+      "import": "./lib/schemas/index.mjs",
+      "require": "./lib/schemas/index.cjs"
+    },
+    "zod": {
+      "import": "./lib/zod.mjs",
+      "require": "./lib/zod.cjs"
+    },
+    "nestjs": {
+      "import": "./lib/nestjs.mjs",
+      "require": "./lib/nestjs.cjs"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "schema": [
+        "./lib/schemas/index.d.ts"
+      ],
+      "zod": [
+        "./lib/zod.d.ts"
+      ],
+      "nestjs": [
+        "./lib/nestjs.d.ts"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "rollup --config rollup.config.ts --configPlugin typescript"
+  },
+  "dependencies": {
+    "@anatine/zod-nestjs": "^2.0.5",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@config/rollup": "workspace:^",
+    "rollup": "^4.13.0"
+  }
+}

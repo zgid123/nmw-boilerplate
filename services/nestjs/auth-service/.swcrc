@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json.schemastore.org/swcrc",
+  "minify": false,
+  "module": {
+    "type": "commonjs"
+  },
+  "jsc": {
+    "baseUrl": "./src",
+    "target": "esnext",
+    "keepClassNames": true,
+    "parser": {
+      "decorators": true,
+      "dynamicImport": true,
+      "syntax": "typescript"
+    },
+    "transform": {
+      "legacyDecorator": true,
+      "decoratorMetadata": true
+    }
+  },
+  "exclude": [
+    "src/__tests__"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "name": "nmw-boilerplate",
+  "description": "NestJS + MikroORM + Whatever boilerplate",
+  "author": "Alpha",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "prepare": "husky install || true",
+    "preinstall": "npx only-allow pnpm",
+    "clear": "pnpm -r exec -- rm -rf",
+    "dev": "turbo run dev --parallel --no-cache",
+    "serve": "turbo run serve --parallel --no-cache",
+    "build": "turbo run build --filter=@nest/* --filter=@cjs/* --filter=@config/rollup --filter=@data/grpc --filter=@data/dtos --filter=@core/utils",
+    "build:cmj": "pnpm build",
+    "build:all": "turbo run build",
+    "update-packages": "pnpm update -i -r --latest",
+    "gen-grpc": "pnpm gen-grpc-typing"
+  },
+  "devDependencies": {
+    "@config/eslint-config-custom": "workspace:^",
+    "@config/tsconfig": "workspace:^",
+    "@grpc.ts/cli": "^1.0.3",
+    "@grpc.ts/core": "^1.1.5",
+    "@types/detect-port": "^1.3.5",
+    "@types/globals": "workspace:^",
+    "@vitest/coverage-istanbul": "^1.4.0",
+    "dotenv-cli": "^7.4.1",
+    "eslint": "^8.57.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "turbo": "^1.12.5",
+    "typescript": "^5.4.2",
+    "vitest": "^1.4.0"
+  },
+  "dependencies": {
+    "detect-port": "^1.5.1",
+    "tslib": "^2.6.2"
+  }
+}

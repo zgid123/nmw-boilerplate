@@ -1,0 +1,45 @@
+{
+  "name": "@nest/test-utils",
+  "version": "0.0.1",
+  "exports": {
+    "./e2e": "./lib/e2e.js",
+    "./vitest": "./lib/vitest.js",
+    "./utils": "./lib/utils/index.js"
+  },
+  "typesVersions": {
+    "*": {
+      "e2e": [
+        "./lib/e2e.d.ts"
+      ],
+      "vitest": [
+        "./lib/vitest.d.ts"
+      ],
+      "utils": [
+        "./lib/utils/index.d.ts"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@automapper-add-on/classes": "^1.0.1",
+    "@automapper-add-on/mikro-premap": "^1.0.2",
+    "@automapper/core": "^8.8.1",
+    "@automapper/nestjs": "^8.8.1",
+    "@cjs/mikro": "workspace:^",
+    "@core/utils": "workspace:^",
+    "@grpc.ts/nestjs-client": "^1.0.4",
+    "@grpc.ts/nestjs-server": "^1.0.5",
+    "@mikro-orm/nestjs": "^5.2.3",
+    "@nest/interceptors": "workspace:^",
+    "@nestjs/testing": "^10.3.4",
+    "remeda": "^1.54.0",
+    "supertest": "^6.3.4",
+    "unplugin-swc": "^1.4.4"
+  },
+  "devDependencies": {
+    "@nestjs/common": "^10.3.4",
+    "@types/supertest": "^6.0.2"
+  }
+}
