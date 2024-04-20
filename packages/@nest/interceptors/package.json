@@ -29,8 +29,8 @@
     "@automapper/core": "^8.8.1",
     "@automapper/nestjs": "^8.8.1",
     "@grpc.ts/core": "^1.1.5",
-    "@nestjs/common": "^10.3.4",
-    "reflect-metadata": "^0.2.1",
+    "@nestjs/common": "^10.3.8",
+    "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1"
   },
   "devDependencies": {

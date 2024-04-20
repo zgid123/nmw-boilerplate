@@ -29,6 +29,6 @@
   },
   "devDependencies": {
     "@config/rollup": "workspace:^",
-    "rollup": "^4.13.0"
+    "rollup": "^4.15.0"
   }
 }

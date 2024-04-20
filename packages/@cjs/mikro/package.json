@@ -19,11 +19,11 @@
     "build": "rollup --config rollup.config.ts --configPlugin typescript"
   },
   "dependencies": {
-    "@mikro-orm/core": "^6.1.11",
-    "@mikro-orm/entity-generator": "^6.1.11",
-    "@mikro-orm/migrations": "^6.1.11",
-    "@mikro-orm/postgresql": "^6.1.11",
-    "@mikro-orm/seeder": "^6.1.11",
+    "@mikro-orm/core": "^6.2.1",
+    "@mikro-orm/entity-generator": "^6.2.1",
+    "@mikro-orm/migrations": "^6.2.1",
+    "@mikro-orm/postgresql": "^6.2.1",
+    "@mikro-orm/seeder": "^6.2.1",
     "pluralize": "^8.0.0",
     "uniqid": "^5.4.0"
   },
@@ -31,6 +31,6 @@
     "@config/rollup": "workspace:^",
     "@types/pluralize": "^0.0.33",
     "@types/uniqid": "^5.3.4",
-    "rollup": "^4.13.0"
+    "rollup": "^4.15.0"
   }
 }

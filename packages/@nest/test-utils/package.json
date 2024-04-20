@@ -33,13 +33,13 @@
     "@grpc.ts/nestjs-server": "^1.0.5",
     "@mikro-orm/nestjs": "^5.2.3",
     "@nest/interceptors": "workspace:^",
-    "@nestjs/testing": "^10.3.4",
-    "remeda": "^1.54.0",
+    "@nestjs/testing": "^10.3.8",
+    "remeda": "^1.60.1",
     "supertest": "^6.3.4",
-    "unplugin-swc": "^1.4.4"
+    "unplugin-swc": "^1.4.5"
   },
   "devDependencies": {
-    "@nestjs/common": "^10.3.4",
+    "@nestjs/common": "^10.3.8",
     "@types/supertest": "^6.0.2"
   }
 }
