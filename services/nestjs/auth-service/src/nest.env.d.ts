@@ -1,5 +1,3 @@
-/// <reference types="@types/globals" />
-
 declare namespace NodeJS {
   export interface ProcessEnv {
     DB_NAME: string;

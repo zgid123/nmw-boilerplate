@@ -34,8 +34,8 @@
     "@mikro-orm/nestjs": "^5.2.3",
     "@nest/interceptors": "workspace:^",
     "@nestjs/testing": "^10.3.8",
-    "remeda": "^1.60.1",
-    "supertest": "^6.3.4",
+    "remeda": "^1.61.0",
+    "supertest": "^7.0.0",
     "unplugin-swc": "^1.4.5"
   },
   "devDependencies": {

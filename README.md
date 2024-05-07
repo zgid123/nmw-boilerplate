@@ -79,6 +79,10 @@ openssl req -config infrastructures/tls/tlsConfig.cnf -new -x509 -key infrastruc
 openssl pkcs12 -inkey infrastructures/tls/tls.pem -in infrastructures/tls/tls.crt -export -out infrastructures/tls/tls.pfx
 ```
 
+# NOTES
+
+- when using `dbNameAffix` for unit test, must use short name or else you will face issue
+
 # TODO
 
 - integrate `zod` as validation for NestJS

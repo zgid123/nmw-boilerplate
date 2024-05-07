@@ -27,7 +27,7 @@ describe('[Auth Service]: gRPC/Auth/Services/RetrieveUserService', () => {
       providers: [RetrieveUserService],
       orm: {
         entities: [User],
-        dbNameAffix: 'grpc_auth_retrieve_user_service',
+        dbNameAffix: 'grpc_auth_get_user_service',
       },
     });
 

@@ -17,7 +17,8 @@
     "strict": true,
     "target": "esnext",
     "types": [
-      "vitest/globals"
+      "vitest/globals",
+      "@types/globals"
     ]
   },
   "exclude": [
