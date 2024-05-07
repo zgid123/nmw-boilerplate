@@ -51,5 +51,5 @@ export class User extends Base {
   role: keyof typeof roles;
 
   @OneToMany(() => AllowedToken, (allowedToken) => allowedToken.user)
-  allowedToken = new Collection<AllowedToken>(this);
+  allowedTokens = new Collection<AllowedToken>(this);
 }
