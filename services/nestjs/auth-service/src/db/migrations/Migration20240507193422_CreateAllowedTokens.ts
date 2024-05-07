@@ -1,9 +1,9 @@
 import { Migration } from '@mikro-orm/migrations';
 
-export class Migration20240310152144_CreateAllowedTokens extends Migration {
+export class Migration20240507193422_CreateAllowedTokens extends Migration {
   async up(): Promise<void> {
     this.addSql(
-      'create table "allowed_tokens" ("id" serial primary key, "created_at" timestamptz not null, "updated_at" timestamptz not null, "aud" varchar(255) not null, "exp" timestamptz not null, "jti" text not null, "user_id" int not null);',
+      'create table "allowed_tokens" ("id" bigserial primary key, "created_at" timestamptz not null, "updated_at" timestamptz not null, "aud" varchar(255) not null, "exp" timestamptz not null, "jti" text not null, "user_id" bigint not null);',
     );
 
     this.addSql(

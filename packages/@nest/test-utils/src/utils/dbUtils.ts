@@ -10,7 +10,7 @@ export async function createDatabase(orm: MikroORM): Promise<void> {
 export async function dropDatabase(orm: MikroORM): Promise<void> {
   const { dbName } = orm.config.getAll();
 
-  await orm.getSchemaGenerator().dropDatabase(dbName || 'cap_vault_test');
+  await orm.getSchemaGenerator().dropDatabase(dbName || 'nmw_boilerplate_test');
 }
 
 export async function truncateAllTables(orm: MikroORM): Promise<void> {

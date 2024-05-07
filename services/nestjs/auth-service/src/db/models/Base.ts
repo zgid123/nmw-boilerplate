@@ -4,7 +4,9 @@ import { Entity, PrimaryKey, Property } from '@cjs/mikro/core';
 @Entity({ abstract: true })
 export abstract class Base {
   @AutoMap()
-  @PrimaryKey()
+  @PrimaryKey({
+    type: 'bigint',
+  })
   id: number;
 
   @AutoMap()

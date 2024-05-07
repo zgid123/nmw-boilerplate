@@ -21,7 +21,7 @@ export function createMikro({
         entitiesTs: entities,
         allowGlobalContext: true,
         dynamicDatabaseName: true,
-        dbName: combine({ joinWith: '_' }, 'cap_vault_test', dbNameAffix),
+        dbName: combine({ joinWith: '_' }, 'nmw_boilerplate_test', dbNameAffix),
       }),
     ),
     MikroOrmModule.forFeature(entities as EntityName<AnyEntity>[]),

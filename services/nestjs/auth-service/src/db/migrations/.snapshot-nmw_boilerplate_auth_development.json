@@ -8,12 +8,12 @@
       "columns": {
         "id": {
           "name": "id",
-          "type": "serial",
+          "type": "bigserial",
           "unsigned": true,
           "autoincrement": true,
           "primary": true,
           "nullable": false,
-          "mappedType": "integer"
+          "mappedType": "bigint"
         },
         "created_at": {
           "name": "created_at",
@@ -137,12 +137,12 @@
       "columns": {
         "id": {
           "name": "id",
-          "type": "serial",
+          "type": "bigserial",
           "unsigned": true,
           "autoincrement": true,
           "primary": true,
           "nullable": false,
-          "mappedType": "integer"
+          "mappedType": "bigint"
         },
         "created_at": {
           "name": "created_at",
@@ -194,12 +194,12 @@
         },
         "user_id": {
           "name": "user_id",
-          "type": "int",
+          "type": "bigint",
           "unsigned": false,
           "autoincrement": false,
           "primary": false,
           "nullable": false,
-          "mappedType": "integer"
+          "mappedType": "bigint"
         }
       },
       "name": "allowed_tokens",
